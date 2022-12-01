@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
     long highest_elf;
     FILE* fp;
 
-    fp = fopen("input", "r");
+    fp = fopen("day-25-input", "r");
     if (fp == NULL) {
         perror("Could not open input.");
         exit(1);
