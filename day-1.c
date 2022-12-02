@@ -1,10 +1,10 @@
 /*
  * Advent of code puzzle day 25 (1 Dec 2022)
  * Compile with
- * gcc -o day-25 day-25.c
+ * gcc -o day-1 day-1.c
  *
  * To get the top three:
- * ./day-25 | grep -v highest | cut -d ' ' -f 5 | sort -hr | head -3
+ * ./day-1 | grep -v highest | cut -d ' ' -f 5 | sort -hr | head -3
  */
 
 #include <stdio.h>
@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
     long highest_elf;
     FILE* fp;
 
-    fp = fopen("day-25-input", "r");
+    fp = fopen("day-1-input", "r");
     if (fp == NULL) {
         perror("Could not open input.");
         exit(1);
