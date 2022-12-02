@@ -1,7 +1,10 @@
 /*
  * Advent of code puzzle day 25 (1 Dec 2022)
  * Compile with
- * gcc -o day-25 day-25.c 
+ * gcc -o day-25 day-25.c
+ *
+ * To get the top three:
+ * ./day-25 | grep -v highest | cut -d ' ' -f 5 | sort -hr | head -3
  */
 
 #include <stdio.h>
