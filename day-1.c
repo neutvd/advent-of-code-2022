@@ -1,5 +1,5 @@
 /*
- * Advent of code puzzle day 25 (1 Dec 2022)
+ * Advent of code puzzle day 1 (1 Dec 2022)
  * Compile with
  * gcc -o day-1 day-1.c
  *
