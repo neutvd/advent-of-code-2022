@@ -2,6 +2,9 @@
  * Advent of code puzzle day 3 part 2 (3 Dec 2022)
  * Compile with
  * gcc -o day-3_2 day-3_2.c
+ *
+ * Run:
+ * ./day-3_2 < day-3-input
  */
 
 #include <stdlib.h>
