@@ -18,7 +18,7 @@ int main();
 
 int main() {
     char line[READ_LENGTH];
-    long count;
+    long contain_count = 0, overlap_count = 0;
 
     while (fgets(line, READ_LENGTH-1, stdin)) {
         int b1 = atoi(strtok(line, "-,"));
@@ -26,9 +26,16 @@ int main() {
         int b2 = atoi(strtok(NULL, "-,"));
         int e2 = atoi(strtok(NULL, "-,"));
 
-        if (b1 <= b2 && e1 >= e2) count++;
-        else if (b2 <= b1 && e2>= e1) count++;
+        if (b1 <= b2 && e1 >= e2) contain_count++;
+        else if (b2 <= b1 && e2>= e1) contain_count++;
+        else if ((b1 <= b2 && e1 >= b2) || (b1 <= e2 && e1 >= e2)) {
+            printf("%d-%d and %d-%d overlap\n", b1, e1, b2, e2);
+            overlap_count++;
+        } else {
+            printf("%d-%d and %d-%d DO NOT overlap\n", b1, e1, b2, e2);
+        }
     }
-    printf("Nr of assignment pairs where one contains the other: %ld\n", count);
+    printf("Nr of assignment pairs where one contains the other: %ld\n", contain_count);
+    printf("Nr of assignment overlapping pairs: %ld\n", overlap_count + contain_count);
     exit(0);
 }
